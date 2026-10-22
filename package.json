@@ -1,0 +1,37 @@
+{
+  "name": "skill-layered-domain-architecture",
+  "version": "1.0.0",
+  "description": "Agent Skill for Layered Domain Architecture and TDD workflow",
+  "main": "skills/layered-domain-architecture/SKILL.md",
+  "bin": {
+    "skill-layered-domain-architecture": "./bin/cli.js",
+    "install-skill": "./bin/cli.js"
+  },
+  "files": [
+    "bin",
+    "skills",
+    "SKILL.md",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "start": "node ./bin/cli.js"
+  },
+  "keywords": [
+    "agent-skills",
+    "antigravity",
+    "claude-code",
+    "cursor",
+    "copilot-cli",
+    "layered-architecture",
+    "clean-architecture",
+    "tdd",
+    "backend"
+  ],
+  "author": "Abbas Jaber",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/abbasjaber/skill-layered-domain-architecture.git"
+  }
+}

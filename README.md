@@ -6,6 +6,30 @@ Designed for AI coding assistants (Google Antigravity, Claude Code, Cursor, GitH
 
 ---
 
+## ⚡ Instant One-Line Installation with `npx`
+
+No cloning or manual copying needed! Anyone can install the skill with one command:
+
+### 1. Install into Current Project (Recommended)
+Run this inside any project root to add the skill to `.agents/skills/layered-domain-architecture`:
+```bash
+npx github:abbasjaber/skill-layered-domain-architecture
+```
+*Then commit `.agents/skills` to Git so your entire team and their AI agents have it automatically.*
+
+### 2. Install Globally (For All Projects on Machine)
+Installs into `~/.gemini/config/skills` and `~/.agents/skills`:
+```bash
+npx github:abbasjaber/skill-layered-domain-architecture --global
+```
+
+### 3. Install Everywhere (Current Project + Globally)
+```bash
+npx github:abbasjaber/skill-layered-domain-architecture --all
+```
+
+---
+
 ## 🎯 Architecture Blueprint
 
 ```
@@ -30,31 +54,6 @@ Designed for AI coding assistants (Google Antigravity, Claude Code, Cursor, GitH
 
 ---
 
-## 📦 Installation
-
-### Option 1: Global Installation (All Projects on Your Machine)
-
-#### For Antigravity
-```bash
-git clone https://github.com/abbasjaber/skill-layered-domain-architecture.git ~/.gemini/config/skills/layered-domain-architecture
-```
-
-#### For Universal Agent Runtimes (Claude Code, Cursor, Codex, etc.)
-```bash
-git clone https://github.com/abbasjaber/skill-layered-domain-architecture.git ~/.agents/skills/layered-domain-architecture
-```
-
-### Option 2: Project-Level Installation (Share with Your Team)
-
-Inside your project repository root:
-```bash
-mkdir -p .agents/skills
-git clone https://github.com/abbasjaber/skill-layered-domain-architecture.git .agents/skills/layered-domain-architecture
-```
-*Commit `.agents/skills/layered-domain-architecture` to Git so any team member or agent who clones the repo automatically has the skill active.*
-
----
-
 ## 💡 How to Use
 
 AI agents will automatically load this skill whenever tasks match triggering conditions such as:
@@ -70,6 +69,21 @@ You can also prompt your agent explicitly:
 or
 ```text
 Follow the layered-domain-architecture skill to design the billing module.
+```
+
+---
+
+## 📦 Manual Installation (Git Clone Alternative)
+
+#### Globally
+```bash
+git clone https://github.com/abbasjaber/skill-layered-domain-architecture.git ~/.gemini/config/skills/layered-domain-architecture
+```
+
+#### Inside a Project
+```bash
+mkdir -p .agents/skills
+git clone https://github.com/abbasjaber/skill-layered-domain-architecture.git .agents/skills/layered-domain-architecture
 ```
 
 ---
