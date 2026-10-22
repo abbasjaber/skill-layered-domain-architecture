@@ -54,6 +54,41 @@ npx github:abbasjaber/skill-layered-domain-architecture --all
 
 ---
 
+## 🌐 Supported Projects & Frameworks
+
+This skill is designed for **any backend API or server-side application** that handles business logic, databases, and authentication, regardless of the language or framework.
+
+### 1. Ideal Project Types
+
+| Project Type | Why It Works Well |
+| :--- | :--- |
+| **SaaS & Enterprise Platforms** | Keeps large applications organized with strict domain boundaries (`Staff/`, `Client/`, `Billing/`, `Auth/`). |
+| **REST & GraphQL Web APIs** | Ensures clean separation between request parsing, business rules, queries, and JSON response envelopes. |
+| **B2B / Multi-Audience Portals** | Naturally separates different user interfaces (e.g., Client Portal vs. Staff/Admin Portal). |
+| **Fintech, Legal & Healthcare** | Enforces auditability, strict RBAC security tests (401/403), and transactional database rollback guarantees. |
+| **Monoliths & Microservices** | Works equally well inside a modular monolith or inside individual microservices. |
+
+### 2. How the 4 Layers Map Across Frameworks
+
+The pattern (`Transport` &rarr; `Service` &rarr; `Repository` &rarr; `Resource`) translates seamlessly into any backend stack:
+
+| Framework / Language | Transport Layer | Domain Service Layer | Data Access Layer | Serialization Layer |
+| :--- | :--- | :--- | :--- | :--- |
+| **Laravel / PHP** | Controllers | Services (`*Service.php`) | Repositories (`*Repository.php`) | API Resources (`*Resource.php`) |
+| **NestJS / TypeScript** | `@Controller()` | `@Injectable()` Services | TypeORM / Prisma Repositories | DTOs with `class-transformer` |
+| **FastAPI / Python** | Routers (`@router.get`) | Domain Services / Use Cases | SQLAlchemy / SQLModel Repositories | Pydantic Schemas |
+| **Go** | HTTP Handlers / Gin / Fiber | Use Case / Service structs | Storage / Repository interfaces | Response structs |
+| **Spring Boot / Java** | `@RestController` | `@Service` classes | `@Repository` (JPA/Hibernate) | DTO records |
+| **ASP.NET Core / C#** | `ControllerBase` | Application Services | EF Core Repositories | ViewModels / DTOs |
+
+### 3. When NOT to Use It
+
+- **Pure Frontend Projects**: Static websites, simple React/Vue SPA apps without a backend.
+- **Micro-Lambdas / Simple Webhooks**: A simple 10-line cloud function that just resizes an image or sends an alert doesn't need 4 architectural layers.
+- **Data Science / ML Training Pipelines**: Jupyter notebooks or Python data processing scripts (Pandas/PyTorch) don't follow web API layer patterns.
+
+---
+
 ## 💡 How to Use
 
 AI agents will automatically load this skill whenever tasks match triggering conditions such as:
