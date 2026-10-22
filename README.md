@@ -1,5 +1,9 @@
 # Layered Domain Architecture Skill
 
+<p align="center">
+  <img src="assets/banner.jpg" alt="Layered Domain Architecture Skill Banner" width="100%">
+</p>
+
 An Agent Skill providing production-grade guidelines, design patterns, and testing protocols for building backend systems using **Layered Domain Architecture** and **Test-Driven Development (TDD)**.
 
 Designed for AI coding assistants (Google Antigravity, Claude Code, Cursor, GitHub Copilot CLI, Codex) and human engineering teams.
